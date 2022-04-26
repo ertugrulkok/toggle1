@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="container" id="container"></div>
+
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 200px;
+            min-height: 200px;
+            background-color: blue;
+            transition: all 500ms ease-in-out;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50,-50);
+            
+        }
+        .container.active{
+            width: 200px;
+            min-height: 200px;
+            background-color: rgb(255, 102, 0);
+            transform: rotate(360deg);
+            transition: all 500ms ease-in-out;
+            border-radius: 100px;
+            
+        }
+    </style>
+
+    <script>
+
+       const turn = document.getElementById("container");
+      turn.onclick = function () {
+        turn.classList.toggle("active");
+      };
+    </script>
+    
+</body>
+</html>
